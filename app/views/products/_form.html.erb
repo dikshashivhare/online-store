@@ -18,7 +18,9 @@
 
   <div class="field">
     <%= form.label :category %>
-    <%= form.number_field :category %>
+  
+    <%= form.select :category, [ 'electronics', 'footwear', 'jewellery', 'books','fashion_acessories','sports_goods' ], :prompt => 'Select One' %>
+
   </div>
 
   <div class="field">

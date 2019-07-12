@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
 	belongs_to :user, optional: true
 	mount_uploader :image, ImageUploader
+	enum category: [:electronics, :footwear, :jewellery, :books, :fashion_acessories, :sports_goods]
 
 	def self.search(search,search1)
 		

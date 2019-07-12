@@ -3,7 +3,8 @@
 <h1>Products</h1>
 <%= form_tag(products_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
-  <%= text_field_tag :search1, params[:search1], placeholder: "Search Categories" %>
+
+   <%= select_tag(:search1, options_for_select([["electronics",0],["footwear",1],["jewellery",2],["books",3],["fashion_acessories",4],["sports_goods",5]], params[:search1] ), prompt:"select") %>
   <%= submit_tag "Search" %>
 <% end %>
 
